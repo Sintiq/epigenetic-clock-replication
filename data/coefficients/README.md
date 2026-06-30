@@ -20,6 +20,10 @@ Source used for this working copy:
 - Biolearn package license reported by `pip show biolearn`: `new BSD`
 - Biolearn model definition: `Horvathv1`, year 2013, source
   `https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-10-r115`
+- Original Horvath 2013 article and supplementary coefficient files are
+  attributed to Horvath 2013. The article is distributed under the Creative
+  Commons Attribution License 2.0, requiring proper citation of the original
+  work.
 
 Important transform convention:
 
