@@ -13,9 +13,10 @@ Can the Horvath (2013) pan-tissue DNA methylation clock replicate on public
 whole-blood methylation data from GSE40279 / Hannum 2013 with accuracy close to
 the originally reported blood performance?
 
-This repository applies the Horvath 353-CpG pan-tissue clock to the Hannum
-GSE40279 blood methylation dataset. It does not implement the separate Hannum
-2013 blood-specific 71-CpG clock.
+Note: this study applies the Horvath (2013) 353-CpG pan-tissue clock to the
+GSE40279 dataset. GSE40279 is the dataset from Hannum et al. (2013); we are NOT
+using the separate 71-CpG Hannum clock here. Horvath's clock was validated on
+blood, which is why it is appropriate for this whole-blood dataset.
 
 ## Dataset
 
@@ -112,9 +113,9 @@ docker build -t epigenetic-clock-replication .
 docker run --rm epigenetic-clock-replication
 ```
 
-The Dockerfile is provided for reproducibility but has not yet been verified
-across platforms. The reported numbers below were produced with the conda
-workflow.
+Note: the Dockerfile is provided for convenience but has not yet been
+build-verified on this machine (local Docker/WSL not set up). Treat the Docker
+path as untested.
 
 ## Repository layout
 
@@ -226,9 +227,11 @@ This replication can fail or partially replicate for legitimate reasons:
 
 - coefficient-source mismatch
 - incorrect or unavailable sample age metadata
-- normalization differences relative to the original training/evaluation data;
-  this pipeline uses the beta values as provided by GSE40279 and does not apply
-  Horvath's original BMIQ/adjusted-BMIQ normalization code
+- No BMIQ / adjusted-BMIQ normalization is applied; beta values are used as
+  provided by GSE40279. The original Horvath pipeline used BMIQ normalization,
+  so this is a methodological difference from the original.
+- Only the 353-CpG Horvath subset is loaded, not the full methylation matrix;
+  missing-CpG handling is logged at runtime.
 - missing 353-clock CpGs
 - batch effects
 - tissue/platform differences
@@ -244,13 +247,14 @@ Falsification conditions:
 
 ## Citations
 
-- Horvath S. (2013). DNA methylation age of human tissues and cell types.
-  Genome Biology 14:R115 / article 3156.
+- Horvath, S. (2013). DNA methylation age of human tissues and cell types.
+  Genome Biology, 14(10), R115.
   https://doi.org/10.1186/gb-2013-14-10-r115
-- Hannum G., Guinney J., Zhao L., Zhang L., Hughes G., Sadda S., Klotzle B.,
-  Bibikova M., Fan J-B., Gao Y., Deconde R., Chen M., Rajapakse I., Friend S.,
-  Ideker T., Zhang K. (2013). Genome-wide methylation profiles reveal
-  quantitative views of human aging rates. Molecular Cell 49(2), 359-367.
-  https://doi.org/10.1016/j.molcel.2012.10.016
-- GEO accession `GSE40279`: Hannum et al. whole-blood HumanMethylation450
-  public methylation dataset used for this replication.
+- Hannum, G., Guinney, J., Zhao, L., et al. (2013). Genome-wide methylation
+  profiles reveal quantitative views of human aging rates. Molecular Cell,
+  49(2), 359-367. https://doi.org/10.1016/j.molcel.2012.10.016
+- Gene Expression Omnibus accession GSE40279 (data source for this
+  replication).
+- Original Horvath clock coefficients are (c) 2013 Steve Horvath, released
+  under CC BY 2.0; obtained here via the Biolearn 0.9.1 bundled data file
+  biolearn/data/Horvath1.csv (Biolearn license: new BSD).
