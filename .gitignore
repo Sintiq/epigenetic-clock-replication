@@ -1,0 +1,37 @@
+# Raw public data and local caches
+data/raw/
+data/processed/
+backups/
+
+# Generated results. Keep .gitkeep so the directory exists.
+results/*
+!results/.gitkeep
+!results/metrics.csv
+!results/REPLICATION_NOTE.md
+!results/predicted_vs_chronological_age.svg
+!results/crosscheck_biolearn_lightweight.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

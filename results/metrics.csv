@@ -1,0 +1,8 @@
+metric,value,published_reference
+median_absolute_error_years,3.856329584054624,~3.6
+pearson_r,0.9183434720662662,>0.9
+pearson_p_value,1.8569795187660721e-265,
+rmse_years,6.322123159246127,
+slope,0.7965811960029956,
+intercept,10.693559505245958,
+n_samples,656.0,~656

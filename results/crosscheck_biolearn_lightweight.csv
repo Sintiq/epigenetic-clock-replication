@@ -1,0 +1,7 @@
+metric,value
+n_samples_compared,656.0
+mean_abs_difference_years,1.0831444142684454e-17
+max_abs_difference_years,3.552713678800501e-15
+pearson_r_between_predictions,1.0
+biolearn_coefficients_rows,353.0
+biolearn_intercept_from_model_definition,0.696
