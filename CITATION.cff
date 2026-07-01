@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata from this file."
+title: "Replication of the Horvath (2013) Pan-Tissue Epigenetic Clock on Public Blood Methylation Data"
+authors:
+  - name: "Sintiq"
+type: software
+license: MIT
+repository-code: "https://github.com/Sintiq/epigenetic-clock-replication"
+url: "https://github.com/Sintiq/epigenetic-clock-replication"
+abstract: "A reproducible Python replication of the Horvath (2013) pan-tissue epigenetic clock on public whole-blood methylation data from GSE40279."
+keywords:
+  - epigenetic clock
+  - DNA methylation
+  - Horvath clock
+  - GSE40279
+  - reproducible research
+date-released: "2026-06-30"
