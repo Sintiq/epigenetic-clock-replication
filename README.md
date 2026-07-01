@@ -1,5 +1,7 @@
 # Replication of the Horvath (2013) pan-tissue epigenetic clock on public blood methylation data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21090241.svg)](https://doi.org/10.5281/zenodo.21090241)
+
 Status: first reproducible replication pass completed.
 
 This repository is an open-science replication study. The goal is to

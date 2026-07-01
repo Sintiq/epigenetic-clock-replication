@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it using the metadata from this file."
 title: "Replication of the Horvath (2013) Pan-Tissue Epigenetic Clock on Public Blood Methylation Data"
+doi: 10.5281/zenodo.21090241
 authors:
   - name: "Sintiq"
 type: software
